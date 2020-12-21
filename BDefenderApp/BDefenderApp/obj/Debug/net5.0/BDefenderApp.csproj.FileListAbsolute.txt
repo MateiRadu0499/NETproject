@@ -183,7 +183,6 @@ C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\De
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\Debug\net5.0\BDefenderApp.RazorTargetAssemblyInfo.cs
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\BDefenderApp.Views.pdb
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\Debug\net5.0\BDefenderApp.Views.pdb
-C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\Debug\net5.0\Razor\Views\Login\Login.cshtml.g.cs
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\MLModel.zip
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\Microsoft.ML.FastTree.dll
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\Microsoft.ML.LightGbm.dll
@@ -198,3 +197,6 @@ C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\De
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\BDefenderAppML.Model.dll
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\BDefenderAppML.Model.pdb
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\bin\Debug\net5.0\MLModels\WDBC_model.zip
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\Debug\net5.0\Razor\Views\Index.cshtml.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\Debug\net5.0\Razor\Views\Login.cshtml.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\obj\Debug\net5.0\Razor\Views\Register.cshtml.g.cs

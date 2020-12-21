@@ -28,9 +28,7 @@ namespace BDefenderApp.Controllers
 
             BCVerdictPrediction predictedValue = _predictionEnginePool.Predict(modelName: "BCAnalysisModel", example: data);
 
-            string prediction = Convert.ToBoolean(predictedValue.Prediction) ? M : B;
-
-            return Ok(prediction);
+            return Ok(predictedValue.Prediction);
         }
     }
 }

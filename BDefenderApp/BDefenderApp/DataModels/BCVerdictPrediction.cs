@@ -5,7 +5,7 @@ namespace BDefenderApp.DataModels
     public class BCVerdictPrediction : BCDetectionData
     {
         [ColumnName("PredictedLabel")]
-        public bool Prediction { get; set; }
+        public string Prediction { get; set; }
 
         public float Probabilty { get; set; }
 
