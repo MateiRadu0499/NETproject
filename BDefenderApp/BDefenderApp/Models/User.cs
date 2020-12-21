@@ -1,4 +1,8 @@
-﻿namespace BDefenderApp.Model
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+
+namespace BDefenderApp.Models
 {
     public class User
     {
@@ -14,6 +18,11 @@
         public void MarkAsDeleted()
         {
             IsDeleted = true;
+        }
+
+        public static implicit operator User(ActionResult<IEnumerable<User>> v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using BDefenderApp.Model;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace BDefenderApp.Data
 {
@@ -14,6 +9,8 @@ namespace BDefenderApp.Data
         {
         }
 
-        public DbSet<BDefenderApp.Model.User> User { get; set; }
+        public DbSet<BDefenderApp.Models.User> User { get; set; }
+
+        public DbSet<BDefenderApp.Models.Login> Login { get; set; }
     }
 }

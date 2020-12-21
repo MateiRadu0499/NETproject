@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace BDefenderApp.Model
+namespace BDefenderApp.Models
 {
     public class DataContext : DbContext
     {

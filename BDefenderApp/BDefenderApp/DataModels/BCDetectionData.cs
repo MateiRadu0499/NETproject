@@ -8,24 +8,24 @@ namespace BDefenderApp.DataModels
         [LoadColumnName("Label")]
         public bool Verdict { get; set; }
         [LoadColumn(1)]
-        public int Radius { get; set; }
+        public float Radius { get; set; }
         [LoadColumn(2)]
-        public int Texture { get; set; }
+        public float Texture { get; set; }
         [LoadColumn(3)]
-        public int Perimeter { get; set; }
+        public float Perimeter { get; set; }
         [LoadColumn(4)]
-        public int Area { get; set; }
+        public float Area { get; set; }
         [LoadColumn(5)]
-        public int Smoothness { get; set; }
+        public float Smoothness { get; set; }
         [LoadColumn(6)]
-        public int Compactness { get; set; }
+        public float Compactness { get; set; }
         [LoadColumn(7)]
-        public int Concavity { get; set; }
+        public float Concavity { get; set; }
         [LoadColumn(8)]
-        public int ConcavePoints { get; set; }
+        public float ConcavePoints { get; set; }
         [LoadColumn(9)]
-        public int Symmetry { get; set; }
+        public float Symmetry { get; set; }
         [LoadColumn(10)]
-        public int FractalDimenstion { get; set; }
+        public float FractalDimenstion { get; set; }
     }
 }

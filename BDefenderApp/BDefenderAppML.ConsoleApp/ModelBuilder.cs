@@ -12,7 +12,7 @@ namespace BDefenderAppML.ConsoleApp
 {
     public static class ModelBuilder
     {
-        private static string TRAIN_DATA_FILEPATH = @"C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\wdbc.tsv";
+        private static string TRAIN_DATA_FILEPATH = @"C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderApp\MLModels\wdbc.tsv";
         private static string MODEL_FILEPATH = @"C:\Users\Matei Radu\AppData\Local\Temp\MLVSTools\BDefenderAppML\BDefenderAppML.Model\MLModel.zip";
         // Create MLContext to be shared across the model creation workflow objects 
         // Set a random seed for repeatable/deterministic results across multiple trainings.
@@ -44,11 +44,10 @@ namespace BDefenderAppML.ConsoleApp
         public static IEstimator<ITransformer> BuildTrainingPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations 
-            var dataProcessPipeline = mlContext.Transforms.Conversion.MapValueToKey("col1", "col1")
-                                      .Append(mlContext.Transforms.Concatenate("Features", new[] { "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10", "col11", "col12", "col13", "col14", "col15", "col16", "col17", "col18", "col19", "col20", "col21", "col22", "col23", "col24", "col25", "col26", "col27", "col28", "col29", "col30", "col31" }))
-                                      .AppendCacheCheckpoint(mlContext);
+            var dataProcessPipeline = mlContext.Transforms.Conversion.MapValueToKey("col0", "col0")
+                                      .Append(mlContext.Transforms.Concatenate("Features", new[] { "col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10" }));
             // Set the training algorithm 
-            var trainer = mlContext.MulticlassClassification.Trainers.OneVersusAll(mlContext.BinaryClassification.Trainers.FastTree(labelColumnName: "col1", featureColumnName: "Features"), labelColumnName: "col1")
+            var trainer = mlContext.MulticlassClassification.Trainers.LightGbm(labelColumnName: "col0", featureColumnName: "Features")
                                       .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel", "PredictedLabel"));
 
             var trainingPipeline = dataProcessPipeline.Append(trainer);
@@ -71,7 +70,7 @@ namespace BDefenderAppML.ConsoleApp
             // Cross-Validate with single dataset (since we don't have two datasets, one for training and for evaluate)
             // in order to evaluate and get the model's accuracy metrics
             Console.WriteLine("=============== Cross-validating to get model's accuracy metrics ===============");
-            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(trainingDataView, trainingPipeline, numberOfFolds: 5, labelColumnName: "col1");
+            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(trainingDataView, trainingPipeline, numberOfFolds: 5, labelColumnName: "col0");
             PrintMulticlassClassificationFoldsAverageMetrics(crossValidationResults);
         }
 

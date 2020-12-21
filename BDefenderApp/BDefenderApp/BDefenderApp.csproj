@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>5d5a97e9-c4bc-4c05-9ff9-e517a40053a4</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,16 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils" Version="5.0.1" />
     <PackageReference Include="Swashbuckle" Version="5.6.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BDefenderAppML.Model\BDefenderAppML.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MLModels\WDBC_model.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

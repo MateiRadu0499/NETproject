@@ -12,42 +12,23 @@ namespace BDefenderAppML.ConsoleApp
             // Create single instance of sample data from first line of dataset for model input
             ModelInput sampleData = new ModelInput()
             {
-                Col2 = 17.99F,
-                Col3 = 10.38F,
-                Col4 = 122.8F,
-                Col5 = 1001F,
-                Col6 = 0.1184F,
-                Col7 = 0.2776F,
-                Col8 = 0.3001F,
-                Col9 = 0.1471F,
-                Col10 = 0.2419F,
-                Col11 = 0.07871F,
-                Col12 = 1.095F,
-                Col13 = 0.9053F,
-                Col14 = 8.589F,
-                Col15 = 153.4F,
-                Col16 = 0.006399F,
-                Col17 = 0.04904F,
-                Col18 = 0.05373F,
-                Col19 = 0.01587F,
-                Col20 = 0.03003F,
-                Col21 = 0.006193F,
-                Col22 = 25.38F,
-                Col23 = 17.33F,
-                Col24 = 184.6F,
-                Col25 = 2019F,
-                Col26 = 0.1622F,
-                Col27 = 0.6656F,
-                Col28 = 0.7119F,
-                Col29 = 0.2654F,
-                Col30 = 0.4601F,
-                Col31 = 0.1189F,
+                Col1 = 20.57F,
+                Col2 = 17.77F,
+                Col3 = 132.9F,
+                Col4 = 1326F,
+                Col5 = 0.08474F,
+                Col6 = 0.07864F,
+                Col7 = 0.0869F,
+                Col8 = 0.07017F,
+                Col9 = 0.1812F,
+                Col10 = 0.05667F,
             };
 
             // Make a single prediction on the sample data and print results
             var predictionResult = ConsumeModel.Predict(sampleData);
 
-            Console.WriteLine("Using model to make single prediction -- Comparing actual Col1 with predicted Col1 from sample data...\n\n");
+            Console.WriteLine("Using model to make single prediction -- Comparing actual Col0 with predicted Col0 from sample data...\n\n");
+            Console.WriteLine($"Col1: {sampleData.Col1}");
             Console.WriteLine($"Col2: {sampleData.Col2}");
             Console.WriteLine($"Col3: {sampleData.Col3}");
             Console.WriteLine($"Col4: {sampleData.Col4}");
@@ -57,28 +38,7 @@ namespace BDefenderAppML.ConsoleApp
             Console.WriteLine($"Col8: {sampleData.Col8}");
             Console.WriteLine($"Col9: {sampleData.Col9}");
             Console.WriteLine($"Col10: {sampleData.Col10}");
-            Console.WriteLine($"Col11: {sampleData.Col11}");
-            Console.WriteLine($"Col12: {sampleData.Col12}");
-            Console.WriteLine($"Col13: {sampleData.Col13}");
-            Console.WriteLine($"Col14: {sampleData.Col14}");
-            Console.WriteLine($"Col15: {sampleData.Col15}");
-            Console.WriteLine($"Col16: {sampleData.Col16}");
-            Console.WriteLine($"Col17: {sampleData.Col17}");
-            Console.WriteLine($"Col18: {sampleData.Col18}");
-            Console.WriteLine($"Col19: {sampleData.Col19}");
-            Console.WriteLine($"Col20: {sampleData.Col20}");
-            Console.WriteLine($"Col21: {sampleData.Col21}");
-            Console.WriteLine($"Col22: {sampleData.Col22}");
-            Console.WriteLine($"Col23: {sampleData.Col23}");
-            Console.WriteLine($"Col24: {sampleData.Col24}");
-            Console.WriteLine($"Col25: {sampleData.Col25}");
-            Console.WriteLine($"Col26: {sampleData.Col26}");
-            Console.WriteLine($"Col27: {sampleData.Col27}");
-            Console.WriteLine($"Col28: {sampleData.Col28}");
-            Console.WriteLine($"Col29: {sampleData.Col29}");
-            Console.WriteLine($"Col30: {sampleData.Col30}");
-            Console.WriteLine($"Col31: {sampleData.Col31}");
-            Console.WriteLine($"\n\nPredicted Col1 value {predictionResult.Prediction} \nPredicted Col1 scores: [{String.Join(",", predictionResult.Score)}]\n\n");
+            Console.WriteLine($"\n\nPredicted Col0 value {predictionResult.Prediction} \nPredicted Col0 scores: [{String.Join(",", predictionResult.Score)}]\n\n");
             Console.WriteLine("=============== End of process, hit any key to finish ===============");
             Console.ReadKey();
         }

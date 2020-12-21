@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "eQ5j/MuVO4FnaXx9vyXSwinaVeoFFEg6fWaAJmpYrwWLDBXqa8s4eoAfM10xPpMZLkK51Kq2U1r01dTziCmyyQ==",
+  "dgSpecHash": "+z0X+2/xK8D+sULRo0XtA+88/ojKKnrwArO8cR5fFS1+S847NFpXSpfxmHmihnY3IVgmT2VYABV4C7kAMktnFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matei Radu\\OneDrive\\Desktop\\NETproject\\BDefenderApp\\BDefenderApp\\BDefenderApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matei Radu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\lightgbm\\2.2.3\\lightgbm.2.2.3.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.aspnet.webapi.webhost\\4.0.20710\\microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512",
@@ -55,6 +56,8 @@
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml\\1.5.4\\microsoft.ml.1.5.4.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.cpumath\\1.5.4\\microsoft.ml.cpumath.1.5.4.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.dataview\\1.5.4\\microsoft.ml.dataview.1.5.4.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.fasttree\\1.5.0-preview2\\microsoft.ml.fasttree.1.5.0-preview2.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.lightgbm\\1.5.0-preview2\\microsoft.ml.lightgbm.1.5.0-preview2.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.net.http\\2.0.20710\\microsoft.net.http.2.0.20710.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",

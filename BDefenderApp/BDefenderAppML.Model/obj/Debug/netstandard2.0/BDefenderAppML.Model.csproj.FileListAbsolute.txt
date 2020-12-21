@@ -1,0 +1,10 @@
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\bin\Debug\netstandard2.0\MLModel.zip
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\bin\Debug\netstandard2.0\BDefenderAppML.Model.deps.json
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\bin\Debug\netstandard2.0\BDefenderAppML.Model.dll
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\bin\Debug\netstandard2.0\BDefenderAppML.Model.pdb
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\obj\Debug\netstandard2.0\BDefenderAppML.Model.csprojAssemblyReference.cache
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\obj\Debug\netstandard2.0\BDefenderAppML.Model.AssemblyInfoInputs.cache
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\obj\Debug\netstandard2.0\BDefenderAppML.Model.AssemblyInfo.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\obj\Debug\netstandard2.0\BDefenderAppML.Model.csproj.CoreCompileInputs.cache
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\obj\Debug\netstandard2.0\BDefenderAppML.Model.dll
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderApp\BDefenderAppML.Model\obj\Debug\netstandard2.0\BDefenderAppML.Model.pdb

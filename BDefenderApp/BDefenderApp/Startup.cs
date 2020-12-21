@@ -1,4 +1,4 @@
-using BDefenderApp.Model;
+using BDefenderApp.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BDefenderApp.Data;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.ML;
+using BDefenderApp.DataModels;
 
 namespace BDefenderApp
 {
@@ -30,6 +32,8 @@ namespace BDefenderApp
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
             });
 
+            services.AddPredictionEnginePool<BCDetectionData, BCVerdictPrediction>()
+                .FromFile(modelName: "BCAnalysisModel", filePath: "MLModels/WDBC_model.zip", watchForChanges: true);
             services.AddDbContext<BDefenderAppContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("BDefenderAppContext")));
         }
