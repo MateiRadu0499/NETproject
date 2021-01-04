@@ -33,7 +33,7 @@ namespace BDefenderApp
             });
 
             services.AddPredictionEnginePool<BCDetectionData, BCVerdictPrediction>()
-                .FromFile(modelName: "BCAnalysisModel", filePath: "MLModels/WDBC_model.zip", watchForChanges: true);
+                .FromFile(modelName: "BCAnalysisModel", filePath: "MLModels\\WDBC_model.zip", watchForChanges: true);
             services.AddDbContext<BDefenderAppContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("BDefenderAppContext")));
         }

@@ -44,10 +44,10 @@ namespace BDefenderAppML.ConsoleApp
         public static IEstimator<ITransformer> BuildTrainingPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations 
-            var dataProcessPipeline = mlContext.Transforms.Conversion.MapValueToKey("col0", "col0")
-                                      .Append(mlContext.Transforms.Concatenate("Features", new[] { "col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10" }));
+            var dataProcessPipeline = mlContext.Transforms.Conversion.MapValueToKey("col10", "col10")
+                                      .Append(mlContext.Transforms.Concatenate("Features", new[] { "col0", "col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9" }));
             // Set the training algorithm 
-            var trainer = mlContext.MulticlassClassification.Trainers.LightGbm(labelColumnName: "col0", featureColumnName: "Features")
+            var trainer = mlContext.MulticlassClassification.Trainers.LightGbm(labelColumnName: "col10", featureColumnName: "Features")
                                       .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel", "PredictedLabel"));
 
             var trainingPipeline = dataProcessPipeline.Append(trainer);
@@ -70,7 +70,7 @@ namespace BDefenderAppML.ConsoleApp
             // Cross-Validate with single dataset (since we don't have two datasets, one for training and for evaluate)
             // in order to evaluate and get the model's accuracy metrics
             Console.WriteLine("=============== Cross-validating to get model's accuracy metrics ===============");
-            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(trainingDataView, trainingPipeline, numberOfFolds: 5, labelColumnName: "col0");
+            var crossValidationResults = mlContext.MulticlassClassification.CrossValidate(trainingDataView, trainingPipeline, numberOfFolds: 5, labelColumnName: "col10");
             PrintMulticlassClassificationFoldsAverageMetrics(crossValidationResults);
         }
 

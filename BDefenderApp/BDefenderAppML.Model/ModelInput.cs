@@ -7,7 +7,7 @@ namespace BDefenderAppML.Model
     public class ModelInput
     {
         [ColumnName("col0"), LoadColumn(0)]
-        public string Col0 { get; set; }
+        public float Col0 { get; set; }
 
 
         [ColumnName("col1"), LoadColumn(1)]
@@ -47,11 +47,7 @@ namespace BDefenderAppML.Model
 
 
         [ColumnName("col10"), LoadColumn(10)]
-        public float Col10 { get; set; }
-
-
-        [ColumnName("col11"), LoadColumn(11)]
-        public float Col11 { get; set; }
+        public string Col10 { get; set; }
 
 
     }

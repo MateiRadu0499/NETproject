@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+z0X+2/xK8D+sULRo0XtA+88/ojKKnrwArO8cR5fFS1+S847NFpXSpfxmHmihnY3IVgmT2VYABV4C7kAMktnFQ==",
+  "dgSpecHash": "ByIi0GZ6xUc+eiLCJiHzw+b8BtKoaaPNHEHpX9nM6xiGVN/dP9da7n9e6Up5vLXlmVhwmlJG/0msDQ142ZG7mg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matei Radu\\OneDrive\\Desktop\\NETproject\\BDefenderApp\\BDefenderApp\\BDefenderApp.csproj",
   "expectedPackageFiles": [
@@ -56,8 +56,8 @@
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml\\1.5.4\\microsoft.ml.1.5.4.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.cpumath\\1.5.4\\microsoft.ml.cpumath.1.5.4.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.dataview\\1.5.4\\microsoft.ml.dataview.1.5.4.nupkg.sha512",
-    "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.fasttree\\1.5.0-preview2\\microsoft.ml.fasttree.1.5.0-preview2.nupkg.sha512",
-    "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.lightgbm\\1.5.0-preview2\\microsoft.ml.lightgbm.1.5.0-preview2.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.fasttree\\1.5.4\\microsoft.ml.fasttree.1.5.4.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.ml.lightgbm\\1.5.4\\microsoft.ml.lightgbm.1.5.4.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.net.http\\2.0.20710\\microsoft.net.http.2.0.20710.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",

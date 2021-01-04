@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.ML;
 using System;
+using System.Reflection.Metadata;
 
 namespace BDefenderApp.Controllers
 {
@@ -28,7 +29,9 @@ namespace BDefenderApp.Controllers
 
             BCVerdictPrediction predictedValue = _predictionEnginePool.Predict(modelName: "BCAnalysisModel", example: data);
 
-            return Ok(predictedValue.Prediction);
+            string Prediction = Convert.ToBoolean(predictedValue.Prediction) ? M : B;
+
+            return Ok(Prediction);
         }
     }
 }

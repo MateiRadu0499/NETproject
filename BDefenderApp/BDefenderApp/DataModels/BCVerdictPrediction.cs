@@ -2,7 +2,7 @@
 
 namespace BDefenderApp.DataModels
 {
-    public class BCVerdictPrediction : BCDetectionData
+    public class BCVerdictPrediction
     {
         [ColumnName("PredictedLabel")]
         public string Prediction { get; set; }

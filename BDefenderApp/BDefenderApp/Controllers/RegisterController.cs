@@ -4,7 +4,7 @@ using BDefenderApp.Models;
 
 namespace BDefenderApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class RegisterController : Controller
     {
@@ -17,8 +17,7 @@ namespace BDefenderApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            Register obj = new();
-            return View(obj);
+            return BadRequest();
         }
 
         [HttpPost]
@@ -34,7 +33,7 @@ namespace BDefenderApp.Controllers
                 //write his credentials in the database
                 ViewBag.Status = "Registered successfully.";
             }
-            return View(objuserlogin);
+            return Ok();
         }
 
     }

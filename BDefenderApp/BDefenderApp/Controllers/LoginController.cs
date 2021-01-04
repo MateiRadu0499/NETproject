@@ -4,7 +4,7 @@ using BDefenderApp.Models;
 
 namespace BDefenderApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class LoginController : Controller
     {
@@ -17,8 +17,7 @@ namespace BDefenderApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            Login obj = new();
-            return View(obj);
+            return BadRequest();
         }
 
         [HttpPost]
@@ -33,7 +32,7 @@ namespace BDefenderApp.Controllers
             {
                 ViewBag.Status = "Incorrect username or password.";
             }
-            return View(objuserlogin);
+            return Ok();
         }
    
     }

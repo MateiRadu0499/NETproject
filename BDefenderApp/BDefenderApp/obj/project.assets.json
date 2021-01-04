@@ -14,7 +14,8 @@
       "LightGBM/2.2.3": {
         "type": "package",
         "build": {
-          "build/_._": {}
+          "build/LightGBM.props": {},
+          "build/LightGBM.targets": {}
         },
         "runtimeTargets": {
           "runtimes/linux-x64/native/lib_lightgbm.so": {
@@ -919,10 +920,10 @@
           "lib/netstandard2.0/Microsoft.ML.DataView.dll": {}
         }
       },
-      "Microsoft.ML.FastTree/1.5.0-preview2": {
+      "Microsoft.ML.FastTree/1.5.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ML": "1.5.0-preview2"
+          "Microsoft.ML": "1.5.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {}
@@ -952,12 +953,12 @@
           }
         }
       },
-      "Microsoft.ML.LightGbm/1.5.0-preview2": {
+      "Microsoft.ML.LightGbm/1.5.4": {
         "type": "package",
         "dependencies": {
           "LightGBM": "2.2.3",
-          "Microsoft.ML": "1.5.0-preview2",
-          "Microsoft.ML.FastTree": "1.5.0-preview2"
+          "Microsoft.ML": "1.5.4",
+          "Microsoft.ML.FastTree": "1.5.4"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.ML.LightGbm.dll": {}
@@ -3821,10 +3822,10 @@
         "mlnetlogo.png"
       ]
     },
-    "Microsoft.ML.FastTree/1.5.0-preview2": {
-      "sha512": "YORU9USci36Vcy0UhbaQiSZi7qldWgYq90QoYg35wPdzt4iPxLEhXtWubeJD8EA5L47AfxvULu82MBtB+N9cVA==",
+    "Microsoft.ML.FastTree/1.5.4": {
+      "sha512": "yw3Gx7QN5QTEkC5upaSAGboAz9G45S2GUodUI3F70/qcWyXNeMcjmqkWV2jAbiQaLe/3D7sXxWfGAwmtGiwmGA==",
       "type": "package",
-      "path": "microsoft.ml.fasttree/1.5.0-preview2",
+      "path": "microsoft.ml.fasttree/1.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3833,7 +3834,7 @@
         "build/netstandard2.0/Microsoft.ML.FastTree.props",
         "lib/netstandard2.0/Microsoft.ML.FastTree.dll",
         "lib/netstandard2.0/Microsoft.ML.FastTree.xml",
-        "microsoft.ml.fasttree.1.5.0-preview2.nupkg.sha512",
+        "microsoft.ml.fasttree.1.5.4.nupkg.sha512",
         "microsoft.ml.fasttree.nuspec",
         "mlnetlogo.png",
         "runtimes/linux-x64/native/libFastTreeNative.so",
@@ -3842,10 +3843,10 @@
         "runtimes/win-x86/native/FastTreeNative.dll"
       ]
     },
-    "Microsoft.ML.LightGbm/1.5.0-preview2": {
-      "sha512": "9v5RsopL2CRUHOlOVhgZX6oaYq5F4dwmXIUXIUnj0nCW8xo57WGSlZ60hYjWnyYvHvjzUSbXF6sDkyKSz7wnZw==",
+    "Microsoft.ML.LightGbm/1.5.4": {
+      "sha512": "eCcln8fV27nfbE25yDuBjxF/+sBUVfbQ6PyAP3lSpyVoLNbdc+tHhqYRIaisuXrmy3Ytz5Vk9/YjAjJA7Vq65g==",
       "type": "package",
-      "path": "microsoft.ml.lightgbm/1.5.0-preview2",
+      "path": "microsoft.ml.lightgbm/1.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3853,7 +3854,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.ML.LightGbm.dll",
         "lib/netstandard2.0/Microsoft.ML.LightGbm.xml",
-        "microsoft.ml.lightgbm.1.5.0-preview2.nupkg.sha512",
+        "microsoft.ml.lightgbm.1.5.4.nupkg.sha512",
         "microsoft.ml.lightgbm.nuspec",
         "mlnetlogo.png"
       ]
@@ -8277,6 +8278,7 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.1",
       "Microsoft.Extensions.ML >= 1.5.4",
+      "Microsoft.ML.LightGbm >= 1.5.4",
       "Microsoft.VisualStudio.Web.CodeGeneration >= 5.0.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Contracts >= 5.0.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Core >= 5.0.1",
@@ -8356,6 +8358,10 @@
             "version": "[5.0.1, )"
           },
           "Microsoft.Extensions.ML": {
+            "target": "Package",
+            "version": "[1.5.4, )"
+          },
+          "Microsoft.ML.LightGbm": {
             "target": "Package",
             "version": "[1.5.4, )"
           },
