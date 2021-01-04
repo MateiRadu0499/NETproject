@@ -1,0 +1,10 @@
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\bin\Debug\netstandard2.0\MLModel.zip
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\bin\Debug\netstandard2.0\BCPredictMLML.Model.deps.json
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\bin\Debug\netstandard2.0\BCPredictMLML.Model.dll
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\bin\Debug\netstandard2.0\BCPredictMLML.Model.pdb
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\obj\Debug\netstandard2.0\BCPredictMLML.Model.csprojAssemblyReference.cache
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\obj\Debug\netstandard2.0\BCPredictMLML.Model.AssemblyInfoInputs.cache
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\obj\Debug\netstandard2.0\BCPredictMLML.Model.AssemblyInfo.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\obj\Debug\netstandard2.0\BCPredictMLML.Model.csproj.CoreCompileInputs.cache
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\obj\Debug\netstandard2.0\BCPredictMLML.Model.dll
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BCPredictML\BCPredictMLML.Model\obj\Debug\netstandard2.0\BCPredictMLML.Model.pdb

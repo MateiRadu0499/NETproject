@@ -24,5 +24,6 @@ namespace BDefenderApp.Models
         {
             throw new NotImplementedException();
         }
+
     }
 }

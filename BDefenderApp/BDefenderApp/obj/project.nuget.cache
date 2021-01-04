@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ByIi0GZ6xUc+eiLCJiHzw+b8BtKoaaPNHEHpX9nM6xiGVN/dP9da7n9e6Up5vLXlmVhwmlJG/0msDQ142ZG7mg==",
+  "dgSpecHash": "y83RqjRd9+C/28pOtJS0SIg/zvwhz29Tbs3P9wDfCOFhA4n+cyDZkiASxgwYomhnOFBJP0K9GrhSmkdticbkhw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matei Radu\\OneDrive\\Desktop\\NETproject\\BDefenderApp\\BDefenderApp\\BDefenderApp.csproj",
   "expectedPackageFiles": [
@@ -73,7 +73,7 @@
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\Matei Radu\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",

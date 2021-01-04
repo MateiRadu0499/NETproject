@@ -630,3 +630,9 @@ C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlaz
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\BDefenderBlazorApp.dll
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\ref\BDefenderBlazorApp.dll
 C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\BDefenderBlazorApp.pdb
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\History.razor.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Register.razor.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\Razor\Pages\History.razor.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
+C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\obj\Debug\net5.0\Razor\Pages\Register.razor.g.cs

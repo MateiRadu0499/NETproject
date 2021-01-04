@@ -1,0 +1,105 @@
+﻿@model BCPredictMLML.Model.ModelInput
+@{
+    ViewData["Title"] = "Predict";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>BDefender Prediction</h1>
+
+<hr />
+
+@if (ViewBag.Result != null)
+{
+    string result = "";
+    string prediction = @ViewBag.Result.Prediction;
+    if (prediction.Equals("1"))
+    {
+        result = "True";
+    }
+    else if (prediction.Equals("0"))
+    {
+        result = "False";
+    }
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Prediction:@ViewBag.Result.Prediction</h4>
+        </div>
+    </div>
+    <hr />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Col0" class="custom-control-label"></label>
+                    <input asp-for="Col0" class="form-control" />
+                    <span asp-validation-for="Col0" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col1" class="custom-control-label"></label>
+                    <input asp-for="Col1" class="form-control" />
+                    <span asp-validation-for="Col1" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col2" class="custom-control-label"></label>
+                    <input asp-for="Col2" class="form-control" />
+                    <span asp-validation-for="Col2" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col3" class="custom-control-label"></label>
+                    <input asp-for="Col3" class="form-control" />
+                    <span asp-validation-for="Col3" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col4" class="custom-control-label"></label>
+                    <input asp-for="Col4" class="form-control" />
+                    <span asp-validation-for="Col4" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col5" class="custom-control-label"></label>
+                    <input asp-for="Col5" class="form-control" />
+                    <span asp-validation-for="Col5" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col6" class="custom-control-label"></label>
+                    <input asp-for="Col6" class="form-control" />
+                    <span asp-validation-for="Col6" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col7" class="custom-control-label"></label>
+                    <input asp-for="Col7" class="form-control" />
+                    <span asp-validation-for="Col7" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col8" class="custom-control-label"></label>
+                    <input asp-for="Col8" class="form-control" />
+                    <span asp-validation-for="Col8" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Col9" class="custom-control-label"></label>
+                    <input asp-for="Col9" class="form-control" />
+                    <span asp-validation-for="Col9" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <input type="submit" value="Predict" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
