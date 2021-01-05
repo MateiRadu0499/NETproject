@@ -33,7 +33,7 @@ namespace BDefenderApp.Controllers
                 _context.Users.Add(userRegister);
                 await _context.SaveChangesAsync();
                 string Status = "Registered successfully.";
-                return Ok(Status);
+                return Ok();
             }
         }
 

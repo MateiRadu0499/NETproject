@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0Lu7evaExN6XiYM6ftaRGBKVdFcc0Uw/9SCGaW89jS71J+m2prBdHZMo1PvFksu6q6AHagw9xvOswFfWjz9Tfw==",
+  "dgSpecHash": "Lf1LTocE0HA4AH2J8wtV5RqAcgwUr1XshM+jGms66URfagB55d6DUrpBOgMUNucAO8mkxxorbnRPUhfk2YRM4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matei Radu\\OneDrive\\Desktop\\NETproject\\BDefenderBlazorApp\\BDefenderBlazorApp\\BDefenderBlazorApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\blazored.localstorage\\3.0.0\\blazored.localstorage.3.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.0\\microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.0\\microsoft.aspnetcore.components.5.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.0\\microsoft.aspnetcore.components.analyzers.5.0.0.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.jsinterop\\5.0.0\\microsoft.jsinterop.5.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.0\\microsoft.jsinterop.webassembly.5.0.0.nupkg.sha512",
+    "C:\\Users\\Matei Radu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\system.io.pipelines\\5.0.0\\system.io.pipelines.5.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\Matei Radu\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.0\\microsoft.netcore.app.runtime.browser-wasm.5.0.0.nupkg.sha512"
