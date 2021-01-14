@@ -19,6 +19,12 @@
     color: #858AE3
 }
 
+@media (max-width:900px) {
+    .register-container form {
+        padding: 50px;
+    }
+}
+
 .register-container h2 {
     text-align: end;
     margin-top: 7%;
