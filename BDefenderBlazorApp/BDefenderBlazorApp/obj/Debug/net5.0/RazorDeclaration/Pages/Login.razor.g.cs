@@ -83,19 +83,20 @@ using BDefenderBlazorApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Login.razor"
+#line 3 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Login.razor"
 using BDefenderBlazorApp.Model;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Login.razor"
+#line 4 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Login.razor"
 using System.Timers;
 
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(LoginLayout))]
     [Microsoft.AspNetCore.Components.RouteAttribute("/login")]
     public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,54 +106,50 @@ using System.Timers;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Login.razor"
+#line 30 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Login.razor"
        
-    private List<User> users;
-    private string showType = "password";
-    private static Timer aTimer;
-    private string res = "";
-
     private User user = new User();
-    private string username { get; set; }
-    private string password { get; set; }
+    private string res = "";
+    private static Timer timer;
 
     HttpClient httpClient = new HttpClient()
     {
-        BaseAddress = new Uri("http://localhost:5001")
+        BaseAddress = new Uri("http://localhost:5002")
     };
-
-    private void showPassword()
-    {
-        if (showType == "password")
-        {
-            showType = "text";
-        }
-        else if (showType == "text")
-        {
-            showType = "password";
-        }
-    }
 
     protected async Task LoginUser()
     {
-        List<string> loginUser = new List<string> { username, password };
-        HttpResponseMessage response = await httpClient.PostAsJsonAsync<User>("/api/v1/Login", loginUser);
-
-        if (response.StatusCode.ToString() != "OK")
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync<User>("/api/v1/Login", user);
+        if (response.StatusCode.ToString() == "OK")
         {
-            res = "Invalid credentials!";
+            await localStorage.SetItemAsync("authenticated", "True");
+            await localStorage.SetItemAsync("id",response.Content.ReadAsStringAsync());
+            res = "Logged in succesfully!";
+
+            timer = new Timer();
+            timer.Interval = 2000;
+
+            timer.Elapsed += (sender, args) =>
+            {
+                NavManager.NavigateTo("/login", true);
+            };
+
+            timer.AutoReset = true;
+            timer.Enabled = true;
         }
         else
         {
-            res = "Logged in successfully!";
+            res = "Username or password incorrect, try again.";
         }
+
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
     }
 }
 #pragma warning restore 1591

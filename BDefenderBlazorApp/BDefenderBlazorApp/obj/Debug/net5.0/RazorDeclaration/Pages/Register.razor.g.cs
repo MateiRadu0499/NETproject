@@ -105,29 +105,16 @@ using BDefenderBlazorApp.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Register.razor"
+#line 46 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Register.razor"
        
     private User user = new User();
-    private string showType = "password";
     private string res = "";
     private static Timer timer;
 
     HttpClient httpClient = new HttpClient()
     {
-        BaseAddress = new Uri("http://localhost:5001")
+        BaseAddress = new Uri("http://localhost:5002")
     };
-
-    private void showPassword()
-    {
-        if (showType == "password")
-        {
-            showType = "text";
-        }
-        else if (showType == "text")
-        {
-            showType = "password";
-        }
-    }
 
     protected async Task RegisterUser()
     {
@@ -148,7 +135,6 @@ using BDefenderBlazorApp.Model;
         {
             NavManager.NavigateTo("/login");
         };
-
 
         timer.AutoReset = true;
         timer.Enabled = true;

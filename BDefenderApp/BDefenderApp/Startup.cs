@@ -14,6 +14,7 @@ namespace BDefenderApp
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +26,17 @@ namespace BDefenderApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins, builder =>
+                {
+                    builder.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
+                });
+            });
+
             services.AddControllers();
             services.AddRazorPages();
             services.AddSwaggerGen(c =>
@@ -44,8 +56,9 @@ namespace BDefenderApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
             }
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BDefender"));

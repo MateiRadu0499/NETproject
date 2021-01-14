@@ -30,6 +30,7 @@ namespace BDefenderApp.Controllers
             }
             else
             {
+                userRegister.Password = ComputeSha256Hash(userRegister.Password);
                 _context.Users.Add(userRegister);
                 await _context.SaveChangesAsync();
                 string Status = "Registered successfully.";

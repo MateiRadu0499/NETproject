@@ -16,7 +16,7 @@ namespace BDefenderBlazorApp.Model
         public string LastName { get; set; }
         [Required]
         [Phone]
-        [MinLength(10, ErrorMessage = "Phone number must be at least of 10 digits.")]
+        [MinLength(8, ErrorMessage = "Phone number must be at least of 10 digits.")]
         [MaxLength(17, ErrorMessage = "Phone number may have a maximum of 17 digits.")]
         public string PhoneNumber { get; set; }
         [Required]

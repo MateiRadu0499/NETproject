@@ -1,65 +1,66 @@
 ﻿@page "/login"
+@layout LoginLayout
 @using BDefenderBlazorApp.Model
 @using System.Timers
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
 @inject NavigationManager NavManager
-<h3>Login</h3>
+@inject IJSRuntime JsRuntime
+<h1>Login</h1>
+    <div class="register-container">
+        <div class="form-container">
+            <form method="post">
+                <EditForm Model="@user" OnValidSubmit="LoginUser">
+                    <div class="form-group">
+                        <InputText id="username" class="form-control" placeholder="Username" @bind-Value="user.Username" />
+                    </div>
 
-<div class="form-container">
-    <form method="post">
-        <EditForm Model="@userL" OnValidSubmit="LoginUser">
-            <h2 class="text-center"><strong>Welcome back</strong></h2>
-            <div class="form-group">
-                <InputText id="username" class="form-control" placeholder="Username" @bind-Value="userL.Username" />
-                <ValidationMessage For="@(() => userL.Username)" />
-            </div>
-            <div class="form-group" style="display:inline-flex">
-                <InputText type="@showType" id="password" class="form-control" placeholder="Password" @bind-Value="userL.Password" />
-                <i class="far fa-eye" @onclick="() => showPassword()"></i>
-                <ValidationMessage For="@(() => userL.Password)" />
-            </div>
-            <div class="form-group">
-                <input class="btn btn-success btn-block" type="submit" value="Submit"> <a class="already" href="/register"> Don't have an account? Register here.</a>
-            </div>
-        </EditForm>
-    </form>
-</div>
+                    <div class="form-group" style="display:inline-flex">
+                        <InputText type="password" id="password" class="form-control" placeholder="Password" @bind-Value="user.Password" />
+                    </div>
 
-<p>@res</p>
+                    <div class="form-group">
+                        <input class="btn btn-success btn-block" type="submit" value="Submit"> <a class="linko" href="/register"> Don't have an account? Register here.</a> <a class="linko" href="/forgotpassword"> Forgot your password? Click here.</a>
+                    </div>
+                </EditForm>
+            </form>
+        </div>
+        <h2>@res</h2>
+    </div>
+
 @code {
-    private List<User> users;
-    private string showType = "password";
-    private static Timer aTimer;
+    private User user = new User();
     private string res = "";
-
-    private Login userL = new Login();
+    private static Timer timer;
 
     HttpClient httpClient = new HttpClient()
     {
-        BaseAddress = new Uri("http://localhost:5001")
+        BaseAddress = new Uri("http://localhost:5002")
     };
-
-    private void showPassword()
-    {
-        if (showType == "password")
-        {
-            showType = "text";
-        }
-        else if (showType == "text")
-        {
-            showType = "password";
-        }
-    }
 
     protected async Task LoginUser()
     {
-        HttpResponseMessage response = await httpClient.PostAsJsonAsync<Login>("/api/v1/Login", userL);
-        if (response.StatusCode.ToString() != "OK")
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync<User>("/api/v1/Login", user);
+        if (response.StatusCode.ToString() == "OK")
         {
-            res = "Invalid credentials!";
+            await localStorage.SetItemAsync("authenticated", "True");
+            await localStorage.SetItemAsync("id",response.Content.ReadAsStringAsync());
+            res = "Logged in succesfully!";
+
+            timer = new Timer();
+            timer.Interval = 2000;
+
+            timer.Elapsed += (sender, args) =>
+            {
+                NavManager.NavigateTo("/login", true);
+            };
+
+            timer.AutoReset = true;
+            timer.Enabled = true;
         }
         else
         {
-            res = "Logged in successfully!";
+            res = "Username or password incorrect, try again.";
         }
+
     }
 }

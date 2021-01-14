@@ -1,3 +1,107 @@
+/* /Pages/ErrorPage.razor.rz.scp.css */
+body[b-308mf5gxdf] {
+}
+/* /Pages/ForgotPassword.razor.rz.scp.css */
+body[b-6qg3rj94px] {
+}
+/* /Pages/History.razor.rz.scp.css */
+body[b-t8dya215d9] {
+}
+/* /Pages/Index.razor.rz.scp.css */
+body[b-2duf3shgzp] {
+}
+/* /Pages/Login.razor.rz.scp.css */
+.register-container[b-imfmol34rd] {
+    width: 100%;
+    padding-bottom: 420px;
+}
+
+.register-container .form-container[b-imfmol34rd] {
+    display: table;
+    width: 900px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 10%
+}
+
+.register-container form[b-imfmol34rd] {
+    display: table-cell;
+    width: 450px;
+    background-color: #808080;
+    padding: 50px 50px;
+    color: #858AE3
+}
+
+@media (max-width:900px){
+    .register-container form[b-imfmol34rd]{
+        padding: 50px;
+    }
+}
+
+.register-container h2[b-imfmol34rd] {
+    text-align: end;
+    margin-top: 7%;
+    color: #97DFFC
+}
+
+.register-container form .form-control[b-imfmol34rd] {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid #dfe7f1;
+    border-radius: 0;
+    text-indent: 0px;
+    height: 50px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.register-container form .btn-primary[b-imfmol34rd] {
+    border: none;
+    background: #858AE3;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: none;
+    text-shadow: none;
+    margin-top: 30px;
+    outline: none !important
+}
+
+.register-container form .btn-primary:hover[b-imfmol34rd],
+.register-container form .btn-primary:active[b-imfmol34rd] {
+    background: #97DFFC
+}
+
+.register-container form .linko[b-imfmol34rd] {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #808080;
+    opacity: 0.8;
+    text-decoration: none
+}
+/* /Pages/Prediction.razor.rz.scp.css */
+body[b-eii4m5rr9u] {
+}
+/* /Pages/Register.razor.rz.scp.css */
+body[b-xyb23p5rdq] {
+}
+/* /Shared/LoginLayout.razor.rz.scp.css */
+.page[b-iqht6dlzdd] {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.main[b-iqht6dlzdd] {
+    flex: 1;
+    height: 120vh;
+    background-color: #613DC1;
+    background-position: center;
+    background-size: cover;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-p9woiry1hf] {
     position: relative;

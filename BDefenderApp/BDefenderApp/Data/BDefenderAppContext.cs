@@ -10,7 +10,5 @@ namespace BDefenderApp.Data
         }
 
         public DbSet<BDefenderApp.Models.User> User { get; set; }
-
-        public DbSet<BDefenderApp.Models.Login> Login { get; set; }
     }
 }

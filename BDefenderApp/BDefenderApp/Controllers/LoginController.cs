@@ -18,14 +18,14 @@ namespace BDefenderApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult LoginUser(Login userLogin)
+        public ActionResult LoginUser(User userLogin)
         {
             string hashedPass = ComputeSha256Hash(userLogin.Password);
             var display = _context.Users.Where(u => (u.Username == userLogin.Username && u.Password == hashedPass && u.IsDeleted == false)).FirstOrDefault();
             if(display != null)
             {
                 string Status = "Authenticated succesfully.";
-                return Ok(Status);
+                return Ok(display.Id);
             }
             else
             {

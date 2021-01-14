@@ -12,6 +12,7 @@ namespace BCPredictML
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,6 +24,14 @@ namespace BCPredictML
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddCors(options =>
+               options.AddPolicy(MyAllowSpecificOrigins, builder =>
+               {
+                   builder.AllowAnyHeader()
+                   .AllowAnyMethod()
+                   .AllowAnyOrigin();
+               }
+           ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

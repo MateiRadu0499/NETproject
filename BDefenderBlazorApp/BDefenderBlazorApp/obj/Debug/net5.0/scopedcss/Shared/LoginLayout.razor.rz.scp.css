@@ -1,0 +1,13 @@
+.page[b-iqht6dlzdd] {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.main[b-iqht6dlzdd] {
+    flex: 1;
+    height: 120vh;
+    background-color: #613DC1;
+    background-position: center;
+    background-size: cover;
+}
