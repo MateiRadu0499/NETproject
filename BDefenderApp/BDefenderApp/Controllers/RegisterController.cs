@@ -4,7 +4,6 @@ using BDefenderApp.Models;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json;
 
 namespace BDefenderApp.Controllers
 {

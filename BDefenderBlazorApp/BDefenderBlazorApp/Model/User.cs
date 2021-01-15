@@ -25,5 +25,26 @@ namespace BDefenderBlazorApp.Model
         public string Password { get; set; }
         [Required]
         public string Affiliation { get; set; }
+
+        [Required]
+        public string Col0 { get; set; }//Radius
+        [Required]
+        public string Col1 { get; set; }//Texture
+        [Required]
+        public string Col2 { get; set; }//Perimeter
+        [Required]
+        public string Col3 { get; set; }//Area
+        [Required]
+        public string Col4 { get; set; }//Smoothness
+        [Required]
+        public string Col5 { get; set; }//Compactness
+        [Required]
+        public string Col6 { get; set; }//Concavity
+        [Required]
+        public string Col7 { get; set; }//ConcavePoints
+        [Required]
+        public string Col8 { get; set; }//Symmetry
+        [Required]
+        public string Col9 { get; set; }//FractalDimension
     }
 }

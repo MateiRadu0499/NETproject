@@ -82,6 +82,7 @@ using BDefenderBlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(MainLayout))]
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +91,24 @@ using BDefenderBlazorApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 14 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Index.razor"
+      
+    protected async void GoLogin()
+    {
+        NavManager.NavigateTo("/login");
+    }
+
+    protected async void GoRegister()
+    {
+        NavManager.NavigateTo("/register");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService localStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

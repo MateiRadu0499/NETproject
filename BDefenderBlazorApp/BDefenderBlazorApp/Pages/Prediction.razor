@@ -1,5 +1,73 @@
-﻿<h3>Prediction</h3>
+﻿@page "/prediction"
+@using System.Timers
+@layout LoginLayout
+@inject NavigationManager NavManager
+@using BDefenderBlazorApp.Model
+
+<h4 class="text-center" style="color:white"><strong>Try our prediction system!</strong></h4>
+<div class="prediction-container">
+    <div class="form-container">
+        <EditForm Model="@userPrediction" OnValidSubmit="BCPrediction">
+            <div class="form-group">
+                <InputText id="col0" class="form-control" placeholder="Radius" @bind-Value="userPrediction.Col0" />
+            </div>
+            <div class="form-group">
+                <InputText id="col1" class="form-control" placeholder="Texture" @bind-Value="userPrediction.Col1" />
+            </div>
+            <div class="form-group">
+                <InputText id="col2" class="form-control" placeholder="Perimeter" @bind-Value="userPrediction.Col2" />
+            </div>
+            <div class="form-group">
+                <InputText id="col3" class="form-control" placeholder="Area" @bind-Value="userPrediction.Col3" />
+            </div>
+            <div class="form-group">
+                <InputText id="col4" class="form-control" placeholder="Smoothness" @bind-Value="userPrediction.Col4" />
+            </div>
+            <div class="form-group">
+                <InputText id="col5" class="form-control" placeholder="Compactness" @bind-Value="userPrediction.Col5" />
+            </div>
+            <div class="form-group">
+                <InputText id="col6" class="form-control" placeholder="Concavity" @bind-Value="userPrediction.Col6" />
+            </div>
+            <div class="form-group">
+                <InputText id="col7" class="form-control" placeholder="ConcavePoints" @bind-Value="userPrediction.Col7" />
+            </div>
+            <div class="form-group">
+                <InputText id="col8" class="form-control" placeholder="Symmetry" @bind-Value="userPrediction.Col8" />
+            </div>
+            <div class="form-group">
+                <InputText id="col9" class="form-control" placeholder="FractalDimension" @bind-Value="userPrediction.Col9" />
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary btn-block" type="submit" value="Submit"><a class="links" href="/login">Already have an account? Click here to login.</a>
+            </div>
+        </EditForm>
+    </div>
+    <h2>@res</h2>
+</div>
+
 
 @code {
+    private User userPrediction = new User();
+    private string res = "";
+    private static Timer timer;
 
+    HttpClient httpClient = new HttpClient()
+    {
+        BaseAddress = new Uri("http://localhost:5001")
+    };
+
+    protected async Task BCPrediction()
+    {
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("/BCDetection", userPrediction);
+
+        if (response.Content.ToString() != null)
+        {
+            res = response.Content.ToString();
+        }
+        else
+        {
+            res = "Error at prediction sending";
+        }
+    }
 }

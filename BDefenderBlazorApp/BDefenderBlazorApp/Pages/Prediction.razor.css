@@ -1,2 +1,43 @@
-﻿body {
+﻿.prediction-container {
+    width: 100%;
+    padding-bottom: 420px;
 }
+
+    .prediction-container .form-container {
+        display: table;
+        width: 550px;
+        height: 325px;
+        margin: 0 auto;
+        margin-top: 10%
+    }
+
+    .prediction-container form {
+        width: 450px;
+        display: table-cell;
+        background-color: #858AE3;
+        padding: 50px 50px;
+        color: #858AE3
+    }
+
+    .prediction-container h4 {
+        font-family: Century Gothic;
+        font-size: 60px;
+        line-height: 22px;
+        font-weight: 200;
+        color: #F8F7FF;
+        padding: 80px 0px 20px 0px;
+        margin: 0
+    }
+
+    .prediction-container form .form-control {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        outline: none;
+        border-bottom: 1px solid #dfe7f1;
+        border-radius: 0;
+        text-indent: 0px;
+        height: 50px;
+        font-size: 15px;
+        line-height: 22px;
+    }

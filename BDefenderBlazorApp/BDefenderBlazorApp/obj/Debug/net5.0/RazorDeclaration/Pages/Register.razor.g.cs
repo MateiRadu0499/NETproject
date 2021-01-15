@@ -90,12 +90,13 @@ using System.Timers;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Register.razor"
+#line 5 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Register.razor"
 using BDefenderBlazorApp.Model;
 
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(LoginLayout))]
     [Microsoft.AspNetCore.Components.RouteAttribute("/register")]
     public partial class Register : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,7 +106,7 @@ using BDefenderBlazorApp.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Register.razor"
+#line 48 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Register.razor"
        
     private User user = new User();
     private string res = "";

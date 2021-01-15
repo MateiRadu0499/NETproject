@@ -1,2 +1,6 @@
-﻿body {
+﻿.err {
+    font-size: 25px;
+    color: black;
+    font-family: Century Gothic;
+    position: absolute;
 }

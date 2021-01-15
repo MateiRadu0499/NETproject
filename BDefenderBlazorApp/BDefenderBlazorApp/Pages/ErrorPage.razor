@@ -1,5 +1,26 @@
-﻿<h3>ErrorPage</h3>
+﻿@page "/error"
+@layout MainLayout
+@inject NavigationManager NavManager
+@using System.Timers
+
+<div class="err">Error how did you get here hm? We will redirect you to the home page.</div>
+
 
 @code {
+    protected override async Task OnInitializedAsync()
+    {
 
+        Timer timer = new Timer();
+        timer.Interval = 6000;
+
+        timer.Elapsed += (sender, args) =>
+        {
+            NavManager.NavigateTo("/", true);
+        };
+
+        timer.AutoReset = true;
+
+        timer.Enabled = true;
+
+    }
 }

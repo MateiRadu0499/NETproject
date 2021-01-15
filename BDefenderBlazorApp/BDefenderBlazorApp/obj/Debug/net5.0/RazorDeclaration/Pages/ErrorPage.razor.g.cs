@@ -82,6 +82,15 @@ using BDefenderBlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\ErrorPage.razor"
+using System.Timers;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(MainLayout))]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/error")]
     public partial class ErrorPage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +98,30 @@ using BDefenderBlazorApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 9 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\ErrorPage.razor"
+       
+    protected override async Task OnInitializedAsync()
+    {
+
+        Timer timer = new Timer();
+        timer.Interval = 6000;
+
+        timer.Elapsed += (sender, args) =>
+        {
+            NavManager.NavigateTo("/", true);
+        };
+
+        timer.AutoReset = true;
+
+        timer.Enabled = true;
+
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

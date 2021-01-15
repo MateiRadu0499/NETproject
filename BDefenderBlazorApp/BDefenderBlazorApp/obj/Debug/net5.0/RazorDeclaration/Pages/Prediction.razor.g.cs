@@ -82,6 +82,22 @@ using BDefenderBlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Prediction.razor"
+using System.Timers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Prediction.razor"
+using BDefenderBlazorApp.Model;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(LoginLayout))]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/prediction")]
     public partial class Prediction : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +105,37 @@ using BDefenderBlazorApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 51 "C:\Users\Matei Radu\OneDrive\Desktop\NETproject\BDefenderBlazorApp\BDefenderBlazorApp\Pages\Prediction.razor"
+       
+    private User userPrediction = new User();
+    private string res = "";
+    private static Timer timer;
+
+    HttpClient httpClient = new HttpClient()
+    {
+        BaseAddress = new Uri("http://localhost:5001")
+    };
+
+    protected async Task BCPrediction()
+    {
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("/BCDetection", userPrediction);
+
+        if (response.Content.ToString() != null)
+        {
+            res = response.Content.ToString();
+        }
+        else
+        {
+            res = "Error at prediction sending";
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591
